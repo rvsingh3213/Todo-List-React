@@ -50,7 +50,7 @@ class App extends Component {
 
   //for deleting single item
   handleDelete = (id)=>{
-    const filteredItems= this.state.items.filter(item=> item.id!=id)
+    const filteredItems= this.state.items.filter(item=> item.id!==id)
 
     // so after filtering we need to change the items into state
     this.setState({
@@ -60,9 +60,9 @@ class App extends Component {
   
   //Method for Edit pen
   handleEdit= id=>{
-    const filteredItems=this.state.items.filter(item=>item.id!=id)
+    const filteredItems=this.state.items.filter(item=>item.id!==id)
 
-    const editItem=this.state.items.find(item=> item.id==id)
+    const editItem=this.state.items.find(item=> item.id===id)
     
     console.log(editItem);
 
